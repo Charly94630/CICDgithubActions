@@ -4,7 +4,7 @@ RUN cd products-MS && mvn install -B
 
 FROM openjdk:8-jdk-alpine
 LABEL "Project"="Product-Service"
-LABEL "Author"="Sergio"
+LABEL "Author"="Carlos"
 WORKDIR /app
 COPY --from=BUILD_IMAGE products-MS/target/products-service-example-0.0.1-SNAPSHOT.jar /app/products-service.jar
 EXPOSE 8080
